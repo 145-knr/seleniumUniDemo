@@ -1,0 +1,76 @@
+{
+  "id": "8eb3eaaf-a3a9-48fe-a314-ab1409c0dfb5",
+  "version": "2.0",
+  "name": "slnmTest1",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "30c46b0e-04ef-45b1-b4b1-8e91a7d81b2d",
+    "name": "searchGoogleForKittens",
+    "commands": [{
+      "id": "62a2d398-33f7-411d-b369-029038f58f81",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81900383-b869-4651-9070-0b4ffcb8d0f4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "923x1033",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02ececeb-a99a-4bfb-8d91-d1ac744ed796",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Images",
+      "targets": [
+        ["linkText=Images", "linkText"],
+        ["css=.gb_e:nth-child(2) > .gb_d", "css:finder"],
+        ["xpath=//a[contains(text(),'Images')]", "xpath:link"],
+        ["xpath=//div[@id='gbw']/div/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.google.bg/imghp?hl=en&tab=wi&authuser=0')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Images')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "465a9edf-ff00-47bd-9aa6-e698d1fb0790",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='sbtc']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "kittens"
+    }, {
+      "id": "655bafef-044d-4b36-9b1a-0a5521190bda",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='sbtc']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }],
+  "suites": [{
+    "id": "33669080-cfeb-49c5-b37b-9fe76d3fb18e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.sinoptik.bg/", "https://www.google.com/"],
+  "plugins": []
+}
